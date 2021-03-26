@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BMI App</title>
+</head>
+<body>
+
+<h1>BMI Hesaplayıcıya Hoşgeldiniz</h1> <br>
+
+<ul>
+	<li>
+		Eğerki BMİ 18.5 dan az ise zayıfsınız
+	</li>
+	
+	<li>
+		Eğerki BMİ 18,5 ila 24,9 arasında ise normalsiniz
+	</li>
+	
+	<li>
+		Eğerki BMİ 25, ila 29,9 arasında ise kilolusunuz
+	</li>
+	
+	<li>
+		Eğerki BMİ 30 ila 34,9 arasında ise obezsizniz
+	</li>
+	
+	<li>
+		Eğerki BMİ 35 den fazla ise aşırı obezsiniz
+	</li>
+	
+</ul>
+
+<div>
+
+	<form method="POST" action="/">
+		Kilo (kg):<br>
+		<input type="text" name="kilo"><br>
+		Boy (cm):<br>
+		<input type="text" name="boy"><br>
+		<button type="sumbit" value="Sumbit">Gönder </button>
+	</form>
+
+
+</div>
+
+<br>
+
+<div>
+	{% if bmi %}
+		<p>Sizin BMI'niz {{ bmi }} </p>
+	{% endif %}
+</div>
+
+
+
+</body>
+</html>
