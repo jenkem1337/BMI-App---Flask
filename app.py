@@ -9,7 +9,7 @@ def index():
 		boy = float(request.form.get('boy'))
 		bmi = calcBMI(kilo, boy)
 	return render_template('index.html',
-							bmi=bmi)
+				bmi=bmi)
 def calcBMI(kilo, boy):
 	return (kilo / ((boy / 100) ** 2))
 
