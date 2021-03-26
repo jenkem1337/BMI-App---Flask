@@ -1,6 +1,9 @@
 from flask import Flask, request, render_template
 app = Flask(__name__)
 
+def calcBMI(kilo, boy):
+	return (kilo / ((boy / 100) ** 2))
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
 	bmi = ''
@@ -10,11 +13,6 @@ def index():
 		bmi = calcBMI(kilo, boy)
 	return render_template('index.html',
 				bmi=bmi)
-def calcBMI(kilo, boy):
-	return (kilo / ((boy / 100) ** 2))
-
-
-
 
 
 app.run()
